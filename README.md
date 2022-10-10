@@ -2,14 +2,24 @@
 
 AIVDM (AIS) Decoder module for Node,js
 
-to install:
+Install:
 npm install aivdm-decoder
 
-To use:
 
-    var aivdmDecode = require('aivdm-decoder').aivdmDecode;
-    var aisDecoder = new aivdmDecode({returnJson: false, aivdmPassthrough: true});
-    var sentences = [
+## Imports:
+
+- ESM
+> import { aivdmDecode } from "aivdm-decoder";
+
+- CommonJS
+> const { aivdmDecode } = require('aivdm-decoder');
+
+## Example use:
+
+    const { aivdmDecode } = require('aivdm-decoder');
+    const aisDecoder = new aivdmDecode({returnJson: false, aivdmPassthrough: true});
+
+    const sentences = [
         "!AIVDM,1,1,,B,15DbCb0PAgbmOBsdJb7AJ@ib00SM,0*34",
         "!AIVDM,1,1,,B,37PAfn0Oj3:lIhEd`Ij9gWmd0Pq1,0*2B",
         "!AIVDM,1,1,,A,1;@1hrh00qKbOaGe9UL<dajd04ht,0*74",
@@ -18,7 +28,7 @@ To use:
     ];
 
     sentences.forEach(function (sentence) {
-        var decoded = aisDecoder.decode(sentence);
+        const decoded = aisDecoder.decode(sentence);
         console.log(decoded)
     })
 

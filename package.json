@@ -1,6 +1,6 @@
 {
   "name": "aivdm-decoder",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Decoded AIS AIVDM Sentences",
   "author": "David Quime",
   "contributors": [],
